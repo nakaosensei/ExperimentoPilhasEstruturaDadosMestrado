@@ -17,13 +17,13 @@ def generateInput(qtdeOperators):
         out+=endOperators[randomOperatorIndex]
         if i!=qtdeOperators-1:
             out+=mathOperations[randrange(2)]
-    return out
+    return out    
 
 if __name__ == '__main__':
-    startPoint=100000
+    startPoint=50000
     for i in range(0,5):
         out=generateInput(startPoint)
-        f = open('./inputs/'+str(startPoint)+'.txt','w')
+        f = open('./inputs/'+str(startPoint*2)+'.txt','w')
         f.write(out)
         f.close()
         startPoint*=2
