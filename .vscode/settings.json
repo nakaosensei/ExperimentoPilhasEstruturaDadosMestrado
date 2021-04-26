@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "pilha.h": "c",
+        "time.h": "c",
+        "pilha_contigua.h": "c",
+        "100k.h": "c",
+        "stdio.h": "c",
+        "200k.h": "c",
+        "pilha_encadeada.h": "c"
+    }
+}
