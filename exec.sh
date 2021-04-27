@@ -10,10 +10,11 @@ main='main.o'
 gcc -o binary $contigua $main -lrt
 
 #executa o linker (executavel)
-./binary
+# ./binary
 
 #executa o linker (executavel) com software valgrind
-# valgrind --leak-check=full ./binary
+valgrind --leak-check=full ./binary
+# valgrind   --xtree-memory=full  ./binary
 
 #remover arquivos object e binário
 rm *.o
@@ -31,10 +32,10 @@ rm binary
 # gcc -o binary $encadeada $main -lrt
 
 # #executa o linker (executavel)
-# ./binary
+# # ./binary
 
 # #executa o linker (executavel) com software valgrind
-# # valgrind --leak-check=full ./binary
+# valgrind --leak-check=full ./binary
 
 # #remover arquivos object e binário
 # rm *.o
