@@ -41,7 +41,7 @@ def generateInput2(qtdeOperators):
     return out    
 
 if __name__ == '__main__':
-    startPoint=50000
+    startPoint=500000
     for i in range(0,5):
         out=generateInput2(startPoint)
         f = open('./inputs/'+str(startPoint*2)+'.txt','w')
