@@ -21,7 +21,7 @@ rm *.o
 rm binary
 
 
-# #cria o Object file (arquivos.o)
+#cria o Object file (arquivos.o)
 # gcc -c libraries/pilha_encadeada.c -lrt
 # gcc -c main.c -lrt
 

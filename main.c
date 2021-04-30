@@ -8,11 +8,16 @@
 // #include "inputs/03_32.h"
 // #include "inputs/04_64.h"
 // #include "inputs/05_128.h"
-#include "inputs/f2_100k.h"
+// #include "inputs/f2_100k.h"
 // #include "inputs/f2_200k.h"
 // #include "inputs/f2_400k.h"
 // #include "inputs/f2_800k.h"
-// #include "inputs/f2_1_6M.h"
+#include "inputs/f2_1_6M.h"
+// #include "inputs/f2_01M.h"
+// #include "inputs/f2_02M.h"
+// #include "inputs/f2_04M.h"
+// #include "inputs/f2_08M.h"
+// #include "inputs/f2_16M.h"
 #define CLOCKTYPE CLOCK_MONOTONIC
 
 int verifica_expressao(){
@@ -59,7 +64,7 @@ void print_result(char * number_test){
     /* time */    
     struct timespec tsi, tsf;
     double elaps_s = 0.0;
-    long elaps_ns = 0;
+    long elaps_ns = 0;    
     clock_gettime(CLOCKTYPE, &tsi);
     verifica_expressao();
     clock_gettime(CLOCKTYPE, &tsf);
@@ -70,6 +75,6 @@ void print_result(char * number_test){
 }
 
 int main(){
-    print_result("8");
+    print_result("8");    
     return 0;
 }

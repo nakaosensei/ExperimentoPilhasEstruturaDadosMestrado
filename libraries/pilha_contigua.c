@@ -1,6 +1,6 @@
 #include "pilha_contigua.h"
 
-#define TAM_INICIAL 5
+#define TAM_INICIAL 1
 
 /**************************************
 * DADOS
@@ -19,10 +19,11 @@ struct _pilha {
 void verifica_aumenta(Pilha* p){
     if(p->qtdeElementos < p->tamVetor) return;
 
-    int novoTamanho = p->tamVetor * 2;
-    TipoElemento* vetorAuxiliar = (TipoElemento*)calloc(novoTamanho, sizeof(TipoElemento));
+    int novoTamanho = p->tamVetor*2;
+    TipoElemento* vetorAuxiliar = (TipoElemento*) malloc(novoTamanho * sizeof(TipoElemento));
     int i;
-    for(i = 0; i < p->qtdeElementos; i++) vetorAuxiliar[i] = p->vetor[i];
+    memcpy(vetorAuxiliar, p->vetor, p->qtdeElementos*sizeof(TipoElemento));
+    // for(i = 0; i < p->qtdeElementos; i++) vetorAuxiliar[i] = p->vetor[i];
     free(p->vetor);
     p->vetor = vetorAuxiliar;
     p->tamVetor = novoTamanho;
@@ -92,7 +93,7 @@ void pilha_imprimir(Pilha* p){
     printf("[");
     int i;
     for(i=p->qtdeElementos-1; i >=0 ; i--){
-        printf("%d", p->vetor[i]);
+        printf("%c", p->vetor[i]);
         if(i >= 1) printf(", ");
     }
     printf("]");
