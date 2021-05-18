@@ -1,1 +1,0 @@
-char expressao=["186940269"];

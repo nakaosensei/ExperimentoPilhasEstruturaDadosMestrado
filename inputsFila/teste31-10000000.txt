@@ -1,1 +1,0 @@
-char expressao=["97177296"];
