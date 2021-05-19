@@ -139,12 +139,22 @@ FilaPrioridade* filaP_clone(FilaPrioridade* f){
     return clone;
 }
 
-bool filaP_inserirTodos(FilaPrioridade* f, TipoElemento* vetor, int tamVetor){
+bool filaP_inserirTodos(FilaPrioridade* f, TipoElemento* vetor, long int tamVetor){
     if(!fila_ehValida(f)) return false;
 
-    int i;
+    long int i;
     for(i=0; i < tamVetor ; i++){
         filaP_inserir(f, vetor[i]);
+    }
+    return true;
+}
+
+
+bool filaP_removerTodos(FilaPrioridade* f){
+    if(!fila_ehValida(f)) return false;
+    TipoElemento e;
+    while (!filaP_vazia(f)){
+        filaP_remover(f, &e);
     }
     return true;
 }

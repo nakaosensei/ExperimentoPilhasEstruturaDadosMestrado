@@ -6,7 +6,7 @@
 #include<stdbool.h>
 
 
-typedef char TipoElemento;
+typedef int TipoElemento;
 /**************************************
 * DADOS
 **************************************/
@@ -24,10 +24,7 @@ bool filaP_primeiro(FilaPrioridade* f, TipoElemento* saida); // estratégia do s
 bool filaP_vazia(FilaPrioridade* f);
 int filaP_tamanho(FilaPrioridade* f);
 FilaPrioridade* filaP_clone(FilaPrioridade* f);
-bool filaP_inserirTodos(FilaPrioridade* f, TipoElemento* vetor, int tamVetor);
+bool filaP_inserirTodos(FilaPrioridade* f, TipoElemento* vetor, long int tamVetor);
+bool filaP_removerTodos(FilaPrioridade* f);
 bool filaP_toString(FilaPrioridade* f, char* str);
-
-
-
-
 #endif

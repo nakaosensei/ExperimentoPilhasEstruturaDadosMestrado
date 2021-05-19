@@ -2,6 +2,8 @@
     "files.associations": {
         "fila.h": "c",
         "stdio.h": "c",
-        "teste1-100.h": "c"
+        "teste1-100.h": "c",
+        "hash_map": "c",
+        "algorithm": "c"
     }
 }

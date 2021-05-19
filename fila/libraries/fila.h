@@ -6,7 +6,7 @@
 #include<stdbool.h>
 
 
-typedef char TipoElemento;
+typedef int TipoElemento;
 
 /**************************************
 * DADOS
@@ -26,6 +26,6 @@ int fila_tamanho(Fila* f);
 
 void fila_imprimir(Fila* f);
 Fila* fila_clone(Fila* f);
-bool fila_inserirTodos(Fila* f, TipoElemento* vetor, int tamVetor);
-
+bool fila_inserirTodos(Fila* f, TipoElemento* vetor, long int tamVetor);
+bool fila_removerTodos(Fila* f);
 #endif

@@ -110,3 +110,22 @@ int fila_tamanho(Fila* f){
 
     return f->qtde;
 }
+
+
+bool fila_inserirTodos(Fila* f, TipoElemento* vetor, long int tamVetor){
+    if(!fila_ehValida(f)) return false;
+    long int i;
+    for (i = 0; i < tamVetor; i++){
+        fila_inserir(f, vetor[i]);
+    }
+    return true;
+}
+
+bool fila_removerTodos(Fila* f){
+    if(!fila_ehValida(f)) return false;
+    TipoElemento e;
+    while (!fila_vazia(f)){
+        fila_remover(f, &e);
+    }
+    return true;
+}
