@@ -1,1 +1,0 @@
-char expressao[]="6159946";
