@@ -13,7 +13,7 @@ prioridade_heap='fila_prioridade_heap.o'
 main='main.o'
 
 #cria o linker juntando todos os object file criados anteriorimente.
-gcc -o binary $contigua $main -lrt
+gcc -o binary $prioridade_heap $main -lrt
 
 #executa o linker (executavel)
 ./binary

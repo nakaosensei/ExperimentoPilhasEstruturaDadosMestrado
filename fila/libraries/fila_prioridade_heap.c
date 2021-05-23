@@ -24,9 +24,10 @@ void verifica_aumenta(FilaPrioridade* f){
     if(f->qtdeElementos < f->tamVetor) return;
 
     int novoTamanho = f->tamVetor * 2;
-    TipoElemento* vetorAuxiliar = (TipoElemento*)calloc(novoTamanho, sizeof(TipoElemento));
+    TipoElemento* vetorAuxiliar = (TipoElemento*)malloc(novoTamanho * sizeof(TipoElemento));
     int i;
-    for(i = 0; i < f->qtdeElementos; i++) vetorAuxiliar[i] = f->vetor[i];
+    memcpy(vetorAuxiliar, f->vetor, f->qtdeElementos * sizeof(TipoElemento));
+    // for(i = 0; i < f->qtdeElementos; i++) vetorAuxiliar[i] = f->vetor[i];
     free(f->vetor);
     f->vetor = vetorAuxiliar;
     f->tamVetor = novoTamanho;
@@ -36,9 +37,10 @@ void verifica_diminui(FilaPrioridade* f){
     if(f->qtdeElementos > f->tamVetor/4) return;
 
     int novoTamanho = f->tamVetor / 2;
-    TipoElemento* vetorAuxiliar = (TipoElemento*)calloc(novoTamanho, sizeof(TipoElemento));
+    TipoElemento* vetorAuxiliar = (TipoElemento*)malloc(novoTamanho * sizeof(TipoElemento));
     int i;
-    for(i = 0; i < f->qtdeElementos; i++) vetorAuxiliar[i] = f->vetor[i];
+    memcpy(vetorAuxiliar, f->vetor, f->qtdeElementos * sizeof(TipoElemento));
+    // for(i = 0; i < f->qtdeElementos; i++) vetorAuxiliar[i] = f->vetor[i];
     free(f->vetor);
     f->vetor = vetorAuxiliar;
     f->tamVetor = novoTamanho;
@@ -217,7 +219,7 @@ bool filaP_toString(FilaPrioridade* f, char* str){
 
     int i;
     for(i=0; i < f->qtdeElementos; i++){
-        sprintf(elemento,"%d", f->vetor[i]);
+        sprintf(elemento,"%ld", f->vetor[i]);
         strcat(str, elemento);
         if(i < f->qtdeElementos-1) strcat(str, ",");
     }

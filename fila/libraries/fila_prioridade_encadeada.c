@@ -169,7 +169,7 @@ bool filaP_toString(FilaPrioridade* f, char* str){
     No* aux = f->inicio;
     
     while(aux != NULL){    
-        sprintf(elemento,"%d", aux->dado);
+        sprintf(elemento,"%ld", aux->dado);
         strcat(str, elemento);
         if (aux->prox != NULL) strcat(str, ",");
         aux = aux->prox;

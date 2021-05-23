@@ -6,7 +6,7 @@
 #include<stdbool.h>
 
 
-typedef int TipoElemento;
+typedef long int TipoElemento;
 /**************************************
 * DADOS
 **************************************/
